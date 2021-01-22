@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using Ada.Webpage.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using IYN.Webpage.Models;
 
-namespace IYN.Webpage.Controllers
+namespace Ada.Webpage.Controllers
 {
     public class HomeController : Controller
     {

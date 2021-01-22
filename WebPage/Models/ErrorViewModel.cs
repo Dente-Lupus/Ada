@@ -1,6 +1,4 @@
-using System;
-
-namespace IYN.Webpage.Models
+namespace Ada.Webpage.Models
 {
     public class ErrorViewModel
     {
