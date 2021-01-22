@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -43,6 +44,7 @@ namespace Domain.SeedWork
 
         public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id);
 
+        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
         public override int GetHashCode()
         {
             return HashCode.Combine(Name, Id);

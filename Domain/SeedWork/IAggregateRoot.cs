@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MediatR;
 
 namespace Domain.SeedWork
 {
