@@ -25,25 +25,31 @@
     </div>
 }
 
-<section class="text-center">
-    <div class="container">
-        <h2>Qué está sucediendo</h2>
-        <p class="lead text-muted">Todas las noticias recientes de la región.</p>
-    </div>
-</section>
-
-@if (Model.Posts.Any())
-{
-    <div class="album py-5">
-        <div class="container">
-            <div class="row">
-                <!--primer fila de noticias-->
-                <!--Grid system should divide-->
-                @foreach (var post in Model.Posts.Take(6))
-                {
-                    @await Html.PartialAsync("_PostItem", post)
-                }
+<div class="container">
+    <main role="main" class="pb-3">
+        <h2></h2>
+        <p></p>
+        <section class="text-center">
+            <div class="container">
+                <h2>Qué está sucediendo</h2>
+                <p class="lead text-muted">Todas las noticias recientes de la región.</p>
             </div>
-        </div>
-    </div>
-}
+        </section>
+
+        @if (Model.Posts.Any())
+        {
+            <div class="album py-5">
+                <div class="container">
+                    <div class="row">
+                        <!--primer fila de noticias-->
+                        <!--Grid system should divide-->
+                        @foreach (var post in Model.Posts.Take(6))
+                        {
+                            @await Html.PartialAsync("_PostItem", post)
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </main>
+</div>
