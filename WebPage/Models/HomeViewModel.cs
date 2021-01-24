@@ -14,7 +14,6 @@ namespace Ada.Webpage.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public Uri Image { get; set; }
-        public Uri Action { get; set; }
     }
 
     public class PostSummary

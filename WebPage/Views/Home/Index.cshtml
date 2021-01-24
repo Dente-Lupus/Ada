@@ -8,9 +8,10 @@
 {
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            @foreach (var item in Model.Banner)
+            @await Html.PartialAsync("_BannerItem", Model.Banner.First(), new ViewDataDictionary(ViewData) { { "first", true } })
+            @foreach (var item in Model.Banner.Skip(1))
             {
-                @Html.PartialAsync("_BannerItem", item)
+                @await Html.PartialAsync("_BannerItem", item, new ViewDataDictionary(ViewData) { { "first", false } })
             }
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -40,7 +41,7 @@
                 <!--Grid system should divide-->
                 @foreach (var post in Model.Posts.Take(6))
                 {
-                    @Html.RenderPartialAsync("_PostItem", post)
+                    @await Html.PartialAsync("_PostItem", post)
                 }
             </div>
         </div>
